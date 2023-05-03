@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label">Car Name: </label>
+    <div class="col-sm-11">
+      <input type="text" name="name" placeholder="Enter car name"><br>
+    </div>
+    <label class="col-sm-1 col-form-label">Description: </label>
+    <div class="col-sm-11">
+      <textarea name="desc" placeholder="Enter description" rows="3" cols="22"></textarea><br>
+    </div>
+    <label class="col-sm-1 col-form-label">Year: </label>
+    <div class="col-sm-11">
+      <input type="text" name="year" placeholder="Enter model year">
+    </div>
+    <label class="col-sm-1 col-form-label">Image: </label>
+    <div class="col-sm-11"><input type="file" name="img"></div>
+  </div>
+  <input type="submit" class="col-sm-1" style="margin-left:100px" >
+</form>
+
+{% endblock %}

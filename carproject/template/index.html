@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+  <div class="row">
+    {% for i in car_list %}
+    <div class="col-sm-3">
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top rounded" src=" {{i.img.url}} "  alt="Card image cap" >
+        <div class="card-body">
+          <h5 class="card-title"><strong>{{i.name}}</strong></h5>
+          <a href=" {% url 'carapp:detail' i.id %} " class="btn btn-info">View Details</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

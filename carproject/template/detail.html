@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{cars.img.url}}" width="100%" height="100%"><br>
+        </div>
+        <div class="col-md-6">
+            <h3 style="color:#b0e0e6"><u>{{cars.name}}</u>~({{cars.year}})</h3>
+            <h4 style="color:white"><p class="text-justify">{{cars.desc}}</p></h4>
+            <a class="btn btn-light" href="{% url 'carapp:update' cars.id %}">Update</a>
+            <a class="btn btn-dark" href="{% url 'carapp:delete' cars.id %}">Delete</a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

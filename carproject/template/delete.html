@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<form method="POST" enctype="multipart/form-data" style="text-align:center;background-color:rgb(180, 180, 180,.5);width:600px;height:150px;margin:auto  ">
+  {% csrf_token %}
+  <br>
+  <h2 style="color:white">Do you want to <b>delete</b> this?</h2>
+  <input type="submit" value="Yes" style="padding:15px">
+</form>
+{% endblock %}
